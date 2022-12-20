@@ -7,46 +7,23 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Wolf Tribe</title>
+        <title>Wolves Tribe</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-        <!-- <script src="main.js"></script> -->
-        <!-- Import three.js -->
-        <script src="https://threejs.org/build/three.min.js"></script>
-
+        <!-- Import stylesheet -->
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         
-        <!-- Create Scene -->
-        <script>
-
-            const scene = new THREE.Scene();
-            const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
-
-            const objLoader = new THREE.OBJLoader();
-            const mtlLoader = new THREE.MTLLoader();
-
-            mtlLoader.load( './untitled.mtl', materials => {
-            materials.preload();
-            objLoader.setMaterials( materials );
-            objLoader.load( './untitled.obj', object => {
-                object = obj;
-                scene.add( object );
-            });
-            });
-            function animate() {
-            requestAnimationFrame( animate );
-            object.rotation.x += 0.01;
-            renderer.render( scene, camera );
-            }
-
-            animate();
-        </script>
-
-        <script src="" async defer></script>
+        <div class="container">
+            <div class="row">
+                <div class="Header">
+                    <h1>Wolves Tribe</h1>
+                </div>
+            </div>
+        <script src="main.js" async defer></script>
     </body>
 </html>
