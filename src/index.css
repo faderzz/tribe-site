@@ -5,9 +5,49 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #131313;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.fade-enter {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.fade-enter-active {
+  opacity: 1;
+}
+
+.fade-exit {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.fade-exit-active {
+  opacity: 0;
+}
+
+button {
+  width: fit-content;
+  height: fit-content;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+button img {
+  /* disable dragging */
+  pointer-events: none;
+  width: 20%;
+  height: 20%;
+  /* center to page */
 }
